@@ -34,6 +34,8 @@
 		6969CEBD2050752000DA4FFA /* img9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6969CEAE2050752000DA4FFA /* img9.jpg */; };
 		6969CEBE2050752000DA4FFA /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6969CEAF2050752000DA4FFA /* img10.jpg */; };
 		6969CEBF2050752000DA4FFA /* img11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6969CEB02050752000DA4FFA /* img11.jpg */; };
+		6969CEC220507DAB00DA4FFA /* cafe_da_manha.png in Resources */ = {isa = PBXBuildFile; fileRef = 6969CEC020507DAB00DA4FFA /* cafe_da_manha.png */; };
+		6969CEC320507DAB00DA4FFA /* passagem_aerea.png in Resources */ = {isa = PBXBuildFile; fileRef = 6969CEC120507DAB00DA4FFA /* passagem_aerea.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		6969CEAE2050752000DA4FFA /* img9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img9.jpg; sourceTree = "<group>"; };
 		6969CEAF2050752000DA4FFA /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
 		6969CEB02050752000DA4FFA /* img11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img11.jpg; sourceTree = "<group>"; };
+		6969CEC020507DAB00DA4FFA /* cafe_da_manha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe_da_manha.png; sourceTree = "<group>"; };
+		6969CEC120507DAB00DA4FFA /* passagem_aerea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passagem_aerea.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 		6969CEA1205074FA00DA4FFA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6969CEC020507DAB00DA4FFA /* cafe_da_manha.png */,
+				6969CEC120507DAB00DA4FFA /* passagem_aerea.png */,
 				6969CEA22050752000DA4FFA /* hotel.jpg */,
 				6969CEA32050752000DA4FFA /* icon_back.png */,
 				6969CEA42050752000DA4FFA /* icon_package.png */,
@@ -259,6 +265,7 @@
 				6969CEBC2050752000DA4FFA /* img8.jpg in Resources */,
 				6969CEB92050752000DA4FFA /* img5.jpg in Resources */,
 				6969CEBA2050752000DA4FFA /* img6.jpg in Resources */,
+				6969CEC220507DAB00DA4FFA /* cafe_da_manha.png in Resources */,
 				6969CEB82050752000DA4FFA /* img4.png in Resources */,
 				6969CEB72050752000DA4FFA /* img3.jpg in Resources */,
 				6969CEBB2050752000DA4FFA /* img7.jpg in Resources */,
@@ -272,6 +279,7 @@
 				6969CEB22050752000DA4FFA /* icon_back.png in Resources */,
 				6969CE802050547200DA4FFA /* Main.storyboard in Resources */,
 				6969CEBF2050752000DA4FFA /* img11.jpg in Resources */,
+				6969CEC320507DAB00DA4FFA /* passagem_aerea.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
