@@ -359,6 +359,169 @@
             </objects>
             <point key="canvasLocation" x="2304.8000000000002" y="166.8665667166417"/>
         </scene>
+        <!--Confirmacao Pagamento View Controller-->
+        <scene sceneID="fUS-tB-880">
+            <objects>
+                <viewController storyboardIdentifier="confirmacaoPagamento" id="2sm-7i-5Lj" customClass="ConfirmacaoPagamentoViewController" customModule="Viajabessa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fPJ-zE-b6B"/>
+                        <viewControllerLayoutGuide type="bottom" id="KNg-JO-vYb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5uv-jw-sBC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKH-yO-HIH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARABÉNS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-WO-Cyo">
+                                        <rect key="frame" x="118" y="37" width="140" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compra realizada com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfM-vC-hnK">
+                                        <rect key="frame" x="67" y="70" width="242" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.68235294120000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yfM-vC-hnK" firstAttribute="top" secondItem="HdP-WO-Cyo" secondAttribute="bottom" id="8mY-Se-R8Q"/>
+                                    <constraint firstItem="HdP-WO-Cyo" firstAttribute="centerX" secondItem="sKH-yO-HIH" secondAttribute="centerX" id="Bsw-af-ZOp"/>
+                                    <constraint firstAttribute="bottom" secondItem="yfM-vC-hnK" secondAttribute="bottom" constant="6" id="MEh-nT-NDc"/>
+                                    <constraint firstItem="HdP-WO-Cyo" firstAttribute="top" secondItem="sKH-yO-HIH" secondAttribute="top" constant="37" id="OfU-LN-ccs"/>
+                                    <constraint firstItem="HdP-WO-Cyo" firstAttribute="centerX" secondItem="yfM-vC-hnK" secondAttribute="centerX" id="PZA-4u-7f5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-XF-Pfy">
+                                <rect key="frame" x="16" y="476" width="347" height="35"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.71372549019999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Tyt-CO-ZtF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="voltar para home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="27"/>
+                                </variation>
+                                <connections>
+                                    <action selector="voltarHome:" destination="2sm-7i-5Lj" eventType="touchUpInside" id="1QE-hh-jpg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-cE-m9r">
+                                <rect key="frame" x="16" y="338" width="347" height="130"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hotel + café da manhã" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-Nd-yQf">
+                                <rect key="frame" x="10" y="287" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 adultos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj7-QC-Mf5">
+                                <rect key="frame" x="12" y="255" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8~15 de agosto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1v-Wb-GYj">
+                                <rect key="frame" x="10" y="223" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Porto de Galinhas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-qo-fNt">
+                                <rect key="frame" x="12" y="191" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confira o resumo da compra:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-SX-aML">
+                                <rect key="frame" x="75" y="108" width="225" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PORTO DE GALINHAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-3L-mqJ">
+                                <rect key="frame" x="10" y="151" width="355" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="23"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="45"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fj7-QC-Mf5" firstAttribute="top" secondItem="T1v-Wb-GYj" secondAttribute="bottom" constant="8" symbolic="YES" id="1Bj-ly-6bN"/>
+                            <constraint firstItem="aBT-cE-m9r" firstAttribute="leading" secondItem="gVz-XF-Pfy" secondAttribute="leading" id="3uf-Mp-Zk9"/>
+                            <constraint firstItem="sKH-yO-HIH" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leading" id="6yx-hO-Qy9"/>
+                            <constraint firstItem="6Iy-qo-fNt" firstAttribute="leading" secondItem="T1v-Wb-GYj" secondAttribute="leading" constant="2" id="8s5-h3-qkj"/>
+                            <constraint firstItem="KNg-JO-vYb" firstAttribute="top" secondItem="gVz-XF-Pfy" secondAttribute="bottom" constant="156" id="CZG-Cj-tUQ"/>
+                            <constraint firstItem="T1v-Wb-GYj" firstAttribute="leading" secondItem="Fj7-QC-Mf5" secondAttribute="leading" constant="-2" id="DIj-Q2-rZe"/>
+                            <constraint firstItem="RNb-3L-mqJ" firstAttribute="trailing" secondItem="5uv-jw-sBC" secondAttribute="trailingMargin" constant="6" id="Hn8-JT-5yx"/>
+                            <constraint firstItem="sKH-yO-HIH" firstAttribute="top" secondItem="5uv-jw-sBC" secondAttribute="top" id="J1w-ae-t69"/>
+                            <constraint firstItem="RNb-3L-mqJ" firstAttribute="leading" secondItem="6Iy-qo-fNt" secondAttribute="leading" constant="-2" id="KGb-SV-EDv"/>
+                            <constraint firstItem="RNb-3L-mqJ" firstAttribute="trailing" secondItem="6Iy-qo-fNt" secondAttribute="trailing" constant="-2" id="L6f-mU-SHS"/>
+                            <constraint firstItem="sKH-yO-HIH" firstAttribute="centerX" secondItem="aJc-SX-aML" secondAttribute="centerX" id="LSv-vl-Hj1"/>
+                            <constraint firstItem="Fj7-QC-Mf5" firstAttribute="leading" secondItem="l5a-Nd-yQf" secondAttribute="leading" constant="2" id="QmT-gZ-8Xr"/>
+                            <constraint firstItem="l5a-Nd-yQf" firstAttribute="top" secondItem="Fj7-QC-Mf5" secondAttribute="bottom" constant="8" symbolic="YES" id="Qts-Ss-EH6"/>
+                            <constraint firstItem="T1v-Wb-GYj" firstAttribute="top" secondItem="6Iy-qo-fNt" secondAttribute="bottom" constant="8" symbolic="YES" id="Rkc-z3-eTr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aBT-cE-m9r" secondAttribute="trailing" constant="-4" id="Wo1-ES-6S7"/>
+                            <constraint firstItem="T1v-Wb-GYj" firstAttribute="trailing" secondItem="Fj7-QC-Mf5" secondAttribute="trailing" constant="-2" id="Y9O-xe-b9K"/>
+                            <constraint firstItem="aBT-cE-m9r" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leadingMargin" id="aG3-kN-NIq"/>
+                            <constraint firstItem="RNb-3L-mqJ" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leadingMargin" constant="-6" id="bOa-fQ-BRb"/>
+                            <constraint firstItem="gVz-XF-Pfy" firstAttribute="top" secondItem="aBT-cE-m9r" secondAttribute="bottom" constant="8" symbolic="YES" id="e5M-fG-Qwx"/>
+                            <constraint firstItem="aJc-SX-aML" firstAttribute="top" secondItem="sKH-yO-HIH" secondAttribute="bottom" constant="8" symbolic="YES" id="gH1-b4-aEQ"/>
+                            <constraint firstItem="6Iy-qo-fNt" firstAttribute="trailing" secondItem="T1v-Wb-GYj" secondAttribute="trailing" constant="2" id="gu2-yo-dqo"/>
+                            <constraint firstAttribute="trailing" secondItem="sKH-yO-HIH" secondAttribute="trailing" id="jSF-pD-6yg"/>
+                            <constraint firstItem="RNb-3L-mqJ" firstAttribute="top" secondItem="aJc-SX-aML" secondAttribute="bottom" constant="19" id="rbV-Xr-jly"/>
+                            <constraint firstItem="Fj7-QC-Mf5" firstAttribute="trailing" secondItem="l5a-Nd-yQf" secondAttribute="trailing" constant="2" id="rvF-yD-qUA"/>
+                            <constraint firstItem="aBT-cE-m9r" firstAttribute="trailing" secondItem="gVz-XF-Pfy" secondAttribute="trailing" id="xRW-1v-w63"/>
+                            <constraint firstItem="aBT-cE-m9r" firstAttribute="top" secondItem="l5a-Nd-yQf" secondAttribute="bottom" constant="27" id="yb5-AX-h9j"/>
+                            <constraint firstItem="6Iy-qo-fNt" firstAttribute="top" secondItem="RNb-3L-mqJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ytP-E2-1Cz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botaoVoltarHome" destination="gVz-XF-Pfy" id="NrU-Mk-XTj"/>
+                        <outlet property="imagemPacoteViagem" destination="aBT-cE-m9r" id="32H-qI-bms"/>
+                        <outlet property="labelDataPacoteViagem" destination="T1v-Wb-GYj" id="mgU-Bp-Igx"/>
+                        <outlet property="labelDescricaoPacoteViagem" destination="l5a-Nd-yQf" id="Bmv-Z9-Pp7"/>
+                        <outlet property="labelHotelPacoteViagem" destination="6Iy-qo-fNt" id="3N4-Ut-jCU"/>
+                        <outlet property="labelQuantidadePessoas" destination="Fj7-QC-Mf5" id="xhY-E6-Sf4"/>
+                        <outlet property="labelTituloPacoteViagem" destination="RNb-3L-mqJ" id="fzC-RN-Iih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wr9-zm-uA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3104.8000000000002" y="166.8665667166417"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon_back.png" width="120" height="120"/>

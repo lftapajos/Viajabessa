@@ -58,12 +58,12 @@ class DetalhesViagensViewController: UIViewController {
         datePickerView.addTarget(self, action: #selector(exibeDataValidade(sender:)), for: .valueChanged)
     }
     
-//    @IBAction func finalizarCompra(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
-//        controller.pacoteComprado = pacoteSelecionado
-//        self.navigationController?.pushViewController(controller, animated: true)
-//    }
+    @IBAction func finalizarCompra(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
