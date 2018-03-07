@@ -28,7 +28,7 @@ class DetalhesViagensViewController: UIViewController {
         if let pacote = pacoteSelecionado {
             self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoImagem)
             self.labelTituloPacoteViagem.text = pacote.viagem.titulo
-            //self.labelDescricaoPacoteViagem.text = pacote.descricao
+            self.labelDescricaoPacoteViagem.text = pacote.descricao
             //self.labelDataViagem.text = pacote.dataViagem
             self.labelPrecoPacoteViagem.text = pacote.viagem.preco
         }
