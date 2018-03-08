@@ -25,7 +25,6 @@ class API {
                     
                     //print("json =======> \(json)")
                     
-                    //Recupera somentes os 6 primeiros fundos da API
                     for i in 0 ..< json.count {
                         
                         let titulo = json[i]["titulo"].stringValue
@@ -37,10 +36,7 @@ class API {
                         let dataViagem = json[i]["dataViagem"].stringValue
                         let quantidadePessoas = json[i]["quantidadePessoas"].stringValue
                         
-                        //print("titulo ==> \(titulo)")
-                        
-                        //Carrega fundos da API
-                        
+                        //Carrega Viagens da API
                         viagemApi.append(Viagem(titulo: titulo, quantidadeDias: quantidadeDias, preco: preco, caminhoImagem: caminhoImagem, nomeDoHotel: nomeDoHotel, descricao: descricao, dataViagem: dataViagem, quantidadePessoas: quantidadePessoas)
                         )
                     }

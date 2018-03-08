@@ -33,6 +33,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         self.overlayView = OverlayView().loadView(self.view)
         self.view.addSubview(self.overlayView)
         
+        self.colecaoPacotesViagem.keyboardDismissMode = .interactive
+        
         //Chama a API que salva as Viagens
         API().loadApi(completion: { (loaded) in
             
