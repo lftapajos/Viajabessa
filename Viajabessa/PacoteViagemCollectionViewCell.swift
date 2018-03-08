@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PacoteViagemCollectionViewCell: UICollectionViewCell {
     
@@ -14,15 +15,16 @@ class PacoteViagemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var labelQuantidadeDias: UILabel!
     @IBOutlet weak var labelPreco: UILabel!
+    @IBOutlet weak var activitity: UIActivityIndicatorView!
     
-    func configuraCelula(pacote: PacoteViagem) {
+    func configuraCelula(pacote: Viagem) {
         
-        let formataDias = pacote.viagem.quantidadeDias == 1 ? "dia" : "dias"
+        //let formataDias = pacote.quantidadeDias == 1 ? "dia" : "dias"
         
-        labelTitulo.text = pacote.viagem.titulo
-        imagemViagem.image = UIImage(named: pacote.viagem.caminhoImagem)
-        labelQuantidadeDias.text = "\(pacote.viagem.quantidadeDias) \(formataDias)"
-        labelPreco.text = pacote.viagem.preco
+        labelTitulo.text = pacote.titulo
+        imagemViagem.image = UIImage(named: pacote.caminhoImagem)
+        labelQuantidadeDias.text = "\(pacote.quantidadeDias) dias."
+        labelPreco.text = pacote.preco
         
         self.layer.borderWidth = 0.5
         self.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor

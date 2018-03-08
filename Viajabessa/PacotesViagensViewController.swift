@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UISearchBarDelegate {
     
@@ -14,13 +15,43 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var pesquisarViagens: UISearchBar!
     @IBOutlet weak var labelContadorPacotes: UILabel!
     
-    let listaComTodasViagens : Array<PacoteViagem> = PacoteViagemDAO().retornaTodasViagens()
-    var listaPacotesViagens : Array<PacoteViagem> = []
+    var overlayView = UIView()
+    var listaComTodasViagens : Array<Viagem> = []
+    //PacoteViagemDAO().retornaTodasViagens()
+    var listaPacotesViagens : Array<Viagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listaPacotesViagens = listaComTodasViagens
+        //Carrega Loading enquanto os dados não são carregados pela chamada da API
+        self.overlayView = OverlayView().loadView(self.view)
+        self.view.addSubview(self.overlayView)
+        
+        //Chama a API que salva os Fundos e detalhes dos Fundos
+        API().loadApi(completion: { (loaded) in
+            
+            //Se carregou, mostra os dados
+            if (loaded) {
+                
+                //print("Carregando dados...")
+                
+                //Remove overlayView
+                self.overlayView.removeFromSuperview()
+                
+                //Alimenta os Fundos no Array
+                self.listaPacotesViagens = Dao().loadViagens()
+                self.listaComTodasViagens = Dao().loadViagens()
+                
+                //Recarrega a collectionView
+                self.colecaoPacotesViagem.reloadData()
+            }
+            
+        }, failureBlock: {
+            //Erro ao carregar dados da API
+            //Alert(controller: self).show("Sorry", message: "Error to load data")
+        })
+        
+        //listaPacotesViagens = listaComTodasViagens
         
         colecaoPacotesViagem.dataSource = self
         colecaoPacotesViagem.delegate = self
@@ -38,6 +69,20 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         let pacoteAtual = listaPacotesViagens[indexPath.item]
         celulaPacote.configuraCelula(pacote: pacoteAtual)
+        celulaPacote.activitity.startAnimating()
+        
+        Alamofire.request(listaPacotesViagens[indexPath.row].caminhoImagem).responseImage { response in
+            //debugPrint(response)
+            //debugPrint(response.result)
+            
+            if let image = response.result.value {
+                DispatchQueue.main.async(execute: {
+                    celulaPacote.activitity.stopAnimating()
+                    celulaPacote.activitity.hidesWhenStopped = true
+                    celulaPacote.imagemViagem.image = image
+                })
+            }
+        }
         
         return celulaPacote
     }
@@ -59,8 +104,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         listaPacotesViagens = listaComTodasViagens
         if searchText != "" {
-            let filtroListaViagem = NSPredicate(format: "viagem.titulo contains %@", searchText)
-            let listaFiltrada : Array<PacoteViagem> = (listaPacotesViagens as NSArray).filtered(using: filtroListaViagem) as! Array
+            let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
+            let listaFiltrada : Array<Viagem> = (listaPacotesViagens as NSArray).filtered(using: filtroListaViagem) as! Array
             listaPacotesViagens = listaFiltrada
         }
         self.labelContadorPacotes.text = self.atualizaContadorLabel()

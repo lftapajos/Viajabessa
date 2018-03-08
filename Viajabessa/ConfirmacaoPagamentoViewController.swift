@@ -18,14 +18,14 @@ class ConfirmacaoPagamentoViewController: UIViewController {
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     @IBOutlet weak var botaoVoltarHome: UIButton!
     
-    var pacoteComprado : PacoteViagem? = nil
+    var pacoteComprado : Viagem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let pacote = pacoteComprado {
-            self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoImagem)
-            self.labelTituloPacoteViagem.text = pacote.viagem.titulo
+            self.imagemPacoteViagem.image = UIImage(named: pacote.caminhoImagem)
+            self.labelTituloPacoteViagem.text = pacote.titulo
             self.labelHotelPacoteViagem.text = pacote.nomeDoHotel
             self.labelDataPacoteViagem.text = pacote.dataViagem
             self.labelQuantidadePessoas.text = pacote.quantidadePessoas

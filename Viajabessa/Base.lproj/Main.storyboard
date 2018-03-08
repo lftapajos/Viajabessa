@@ -129,11 +129,19 @@
                                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                                     </variation>
                                                 </label>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Stl-3s-ESZ">
+                                                    <rect key="frame" x="57" y="37" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="4F3-8v-DN2"/>
+                                                        <constraint firstAttribute="width" constant="20" id="dsW-Zn-2me"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="k7A-4e-jAD" secondAttribute="trailing" id="046-MJ-opv"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="Qpz-eW-1KL" secondAttribute="bottom" constant="12" id="0v1-dz-VfW"/>
+                                            <constraint firstItem="Stl-3s-ESZ" firstAttribute="centerY" secondItem="csx-ez-4dT" secondAttribute="centerY" id="3s7-9y-iwI"/>
                                             <constraint firstItem="nL6-Px-yJS" firstAttribute="leading" secondItem="ZvH-Yf-bio" secondAttribute="leadingMargin" id="DbB-S9-6tP"/>
                                             <constraint firstItem="csx-ez-4dT" firstAttribute="top" secondItem="ZvH-Yf-bio" secondAttribute="top" id="Lwz-fy-TrP"/>
                                             <constraint firstItem="nL6-Px-yJS" firstAttribute="trailing" secondItem="ZvH-Yf-bio" secondAttribute="trailingMargin" id="PmQ-4a-zUe"/>
@@ -143,10 +151,12 @@
                                             <constraint firstItem="Qpz-eW-1KL" firstAttribute="leading" secondItem="ZvH-Yf-bio" secondAttribute="leadingMargin" id="ai5-fa-hEy"/>
                                             <constraint firstItem="nL6-Px-yJS" firstAttribute="top" secondItem="csx-ez-4dT" secondAttribute="bottom" id="bsK-Mg-Jev"/>
                                             <constraint firstItem="k7A-4e-jAD" firstAttribute="leading" secondItem="ZvH-Yf-bio" secondAttribute="leadingMargin" id="e9R-eL-LGO"/>
+                                            <constraint firstItem="Stl-3s-ESZ" firstAttribute="centerX" secondItem="csx-ez-4dT" secondAttribute="centerX" id="hBJ-pf-oUO"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="k7A-4e-jAD" secondAttribute="bottom" constant="-8.5" id="kJ1-mE-aFI"/>
                                             <constraint firstItem="Qpz-eW-1KL" firstAttribute="trailing" secondItem="ZvH-Yf-bio" secondAttribute="trailingMargin" id="px6-6z-Hst"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="activitity" destination="Stl-3s-ESZ" id="oH3-9z-O6O"/>
                                             <outlet property="imagemViagem" destination="csx-ez-4dT" id="bl5-PT-gcg"/>
                                             <outlet property="labelPreco" destination="k7A-4e-jAD" id="GXA-vF-Fmc"/>
                                             <outlet property="labelQuantidadeDias" destination="Qpz-eW-1KL" id="LkZ-Sr-HId"/>

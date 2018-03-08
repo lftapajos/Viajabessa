@@ -18,7 +18,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     @IBOutlet weak var textFieldDataValidade: UITextField!
     
-    var pacoteSelecionado : PacoteViagem? = nil
+    var pacoteSelecionado : Viagem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +26,11 @@ class DetalhesViagensViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(aumentarscroll(notification:)), name: .UIKeyboardWillShow, object: nil)
         
         if let pacote = pacoteSelecionado {
-            self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoImagem)
-            self.labelTituloPacoteViagem.text = pacote.viagem.titulo
+            self.imagemPacoteViagem.image = UIImage(named: pacote.caminhoImagem)
+            self.labelTituloPacoteViagem.text = pacote.titulo
             self.labelDescricaoPacoteViagem.text = pacote.descricao
             //self.labelDataViagem.text = pacote.dataViagem
-            self.labelPrecoPacoteViagem.text = pacote.viagem.preco
+            self.labelPrecoPacoteViagem.text = pacote.preco
         }
     }
     
