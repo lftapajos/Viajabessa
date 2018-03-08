@@ -356,8 +356,8 @@
                                     <constraint firstAttribute="trailing" secondItem="usV-cs-6PN" secondAttribute="trailing" constant="12" id="x9A-x6-IMp"/>
                                 </constraints>
                             </scrollView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zal-sn-Bik">
-                                <rect key="frame" x="169" y="74" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zal-sn-Bik">
+                                <rect key="frame" x="178" y="83" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -509,9 +509,13 @@
                                     <constraint firstAttribute="height" constant="144" id="tFd-fr-U71"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="drr-tP-hFb">
+                                <rect key="frame" x="177" y="522" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="drr-tP-hFb" firstAttribute="centerY" secondItem="aBT-cE-m9r" secondAttribute="centerY" id="0yX-6k-Kuq"/>
                             <constraint firstItem="Fj7-QC-Mf5" firstAttribute="top" secondItem="T1v-Wb-GYj" secondAttribute="bottom" constant="8" symbolic="YES" id="1Bj-ly-6bN"/>
                             <constraint firstItem="aBT-cE-m9r" firstAttribute="leading" secondItem="gVz-XF-Pfy" secondAttribute="leading" id="3uf-Mp-Zk9"/>
                             <constraint firstItem="sKH-yO-HIH" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leading" id="6yx-hO-Qy9"/>
@@ -530,6 +534,7 @@
                             <constraint firstItem="T1v-Wb-GYj" firstAttribute="trailing" secondItem="Fj7-QC-Mf5" secondAttribute="trailing" constant="-2" id="Y9O-xe-b9K"/>
                             <constraint firstItem="aBT-cE-m9r" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leadingMargin" constant="-2" id="aG3-kN-NIq"/>
                             <constraint firstItem="RNb-3L-mqJ" firstAttribute="leading" secondItem="5uv-jw-sBC" secondAttribute="leadingMargin" constant="-6" id="bOa-fQ-BRb"/>
+                            <constraint firstItem="drr-tP-hFb" firstAttribute="centerX" secondItem="aBT-cE-m9r" secondAttribute="centerX" id="d7S-JR-Nbv"/>
                             <constraint firstItem="gVz-XF-Pfy" firstAttribute="top" secondItem="aBT-cE-m9r" secondAttribute="bottom" constant="8" symbolic="YES" id="e5M-fG-Qwx"/>
                             <constraint firstItem="aJc-SX-aML" firstAttribute="top" secondItem="sKH-yO-HIH" secondAttribute="bottom" constant="8" symbolic="YES" id="gH1-b4-aEQ"/>
                             <constraint firstItem="6Iy-qo-fNt" firstAttribute="trailing" secondItem="T1v-Wb-GYj" secondAttribute="trailing" constant="2" id="gu2-yo-dqo"/>
@@ -541,6 +546,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activitity" destination="drr-tP-hFb" id="cxc-jc-qCQ"/>
                         <outlet property="botaoVoltarHome" destination="gVz-XF-Pfy" id="NrU-Mk-XTj"/>
                         <outlet property="imagemPacoteViagem" destination="aBT-cE-m9r" id="32H-qI-bms"/>
                         <outlet property="labelDataPacoteViagem" destination="T1v-Wb-GYj" id="mgU-Bp-Igx"/>

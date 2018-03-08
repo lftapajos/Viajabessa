@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ConfirmacaoPagamentoViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class ConfirmacaoPagamentoViewController: UIViewController {
     @IBOutlet weak var labelQuantidadePessoas: UILabel!
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     @IBOutlet weak var botaoVoltarHome: UIButton!
+    @IBOutlet weak var activitity: UIActivityIndicatorView!
     
     var pacoteComprado : Viagem? = nil
     
@@ -24,7 +26,21 @@ class ConfirmacaoPagamentoViewController: UIViewController {
         super.viewDidLoad()
         
         if let pacote = pacoteComprado {
-            self.imagemPacoteViagem.image = UIImage(named: pacote.caminhoImagem)
+            
+            self.activitity.startAnimating()
+            Alamofire.request(pacote.caminhoImagem).responseImage { response in
+                //debugPrint(response)
+                //debugPrint(response.result)
+                
+                if let image = response.result.value {
+                    DispatchQueue.main.async(execute: {
+                        self.activitity.stopAnimating()
+                        self.activitity.hidesWhenStopped = true
+                        self.imagemPacoteViagem.image = image
+                    })
+                }
+            }
+            
             self.labelTituloPacoteViagem.text = pacote.titulo
             self.labelHotelPacoteViagem.text = pacote.nomeDoHotel
             self.labelDataPacoteViagem.text = pacote.dataViagem
