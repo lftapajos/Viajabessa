@@ -1,7 +1,7 @@
 # Viajabessa
 
 
-Teste desenvolvido para a empresa Mobicare. Desenvolvimento de aplicativo para carregar Pacotes de Viagens, permitir a compras, mostrar detalhes e envio de estatísticas.
+Teste desenvolvido para a empresa Mobicare. Desenvolvimento de aplicativo para carregar Pacotes de Viagens, mostrar detalhes, permitir compras e envio de estatísticas.
 
 ## Getting Started
 
