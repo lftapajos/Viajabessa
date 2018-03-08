@@ -53,10 +53,4 @@ class Viagem: NSObject, NSCoding {
         aCoder.encode(quantidadePessoas, forKey : "quantidadePessoas")
     }
     
-//    func getViagens() -> Array<Viagem> {
-//        
-//        //Carrega os Fundos salvos
-//        let viagens = Dao().loadViagens()
-//        return viagens
-//    }
 }

@@ -19,8 +19,6 @@ class PacoteViagemCollectionViewCell: UICollectionViewCell {
     
     func configuraCelula(pacote: Viagem) {
         
-        //let formataDias = pacote.quantidadeDias == 1 ? "dia" : "dias"
-        
         labelTitulo.text = pacote.titulo
         imagemViagem.image = UIImage(named: pacote.caminhoImagem)
         labelQuantidadeDias.text = "\(pacote.quantidadeDias) dias."

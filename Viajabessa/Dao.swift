@@ -16,7 +16,7 @@ class Dao {
     // MARK: Constructor
     init() {
         
-        //Configura caminho para salvar as informações dos Fundos comprados
+        //Configura caminho para salvar as informações das viagens
         let userDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         let dir = userDirs[0]
         //print(dir)

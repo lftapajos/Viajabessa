@@ -51,7 +51,25 @@ class API {
                     completion(true)
                 }
         }
+    }
+    
+    func enviaEstatisticas(systemVersion: String, model: String, modelName: String) {
         
+        //função para enviar relatório do Device do usuário para o Sistema
+        print("Versão do Device: \(systemVersion)")
+        print("Marca do Device: \(model)")
+        print("Modelo de Device: \(modelName)")
+        
+        let parameters = ["systemVersion": systemVersion, "model": model, "modelName": modelName]
+        Alamofire.request(API_URL_Stats, method: .get, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                //debugPrint(response)
+                if response.data != nil {
+                    let json = JSON(data: response.data!)
+                    let retorno = json[0]["Stats"].stringValue
+                    print("Enviou? \(retorno)")
+                }
+        }
     }
 }
 

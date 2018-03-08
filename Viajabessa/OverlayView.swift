@@ -21,7 +21,7 @@ class OverlayView {
         let innerLabel = UILabel()
         innerLabel.textColor = UIColor.black
         innerLabel.frame = CGRect(x: (view.frame.size.width - 200)/2 , y: 0, width: 95, height: 50)
-        innerLabel.text = "Loading ..."
+        innerLabel.text = "Carregando ..."
         innerLabel.backgroundColor = UIColor.clear
         
         //View Center
