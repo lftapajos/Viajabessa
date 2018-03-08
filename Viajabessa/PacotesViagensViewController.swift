@@ -17,7 +17,6 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     
     var overlayView = UIView()
     var listaComTodasViagens : Array<Viagem> = []
-    //PacoteViagemDAO().retornaTodasViagens()
     var listaPacotesViagens : Array<Viagem> = []
     
     override func viewDidLoad() {
@@ -42,6 +41,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
                 self.listaPacotesViagens = Dao().loadViagens()
                 self.listaComTodasViagens = Dao().loadViagens()
                 
+                self.labelContadorPacotes.text = self.atualizaContadorLabel()
+                
                 //Recarrega a collectionView
                 self.colecaoPacotesViagem.reloadData()
             }
@@ -51,13 +52,9 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
             //Alert(controller: self).show("Sorry", message: "Error to load data")
         })
         
-        //listaPacotesViagens = listaComTodasViagens
-        
         colecaoPacotesViagem.dataSource = self
         colecaoPacotesViagem.delegate = self
         pesquisarViagens.delegate = self
-        
-        self.labelContadorPacotes.text = self.atualizaContadorLabel()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

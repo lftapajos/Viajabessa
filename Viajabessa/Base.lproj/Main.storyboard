@@ -356,6 +356,9 @@
                                     <constraint firstAttribute="trailing" secondItem="usV-cs-6PN" secondAttribute="trailing" constant="12" id="x9A-x6-IMp"/>
                                 </constraints>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zal-sn-Bik">
+                                <rect key="frame" x="169" y="74" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -363,14 +366,17 @@
                             <constraint firstItem="mDB-Bt-9rO" firstAttribute="leading" secondItem="OPr-Sl-8k6" secondAttribute="leading" constant="10" id="Cmm-PU-SMO"/>
                             <constraint firstItem="OUs-H8-z1r" firstAttribute="leading" secondItem="OPr-Sl-8k6" secondAttribute="leading" id="Qls-16-mbc"/>
                             <constraint firstItem="MEG-ye-Mn6" firstAttribute="bottom" secondItem="Noz-Cc-oWv" secondAttribute="top" id="Rre-OA-M0M"/>
+                            <constraint firstItem="zal-sn-Bik" firstAttribute="centerX" secondItem="OUs-H8-z1r" secondAttribute="centerX" id="VMW-xE-arL"/>
                             <constraint firstItem="MEG-ye-Mn6" firstAttribute="top" secondItem="OUs-H8-z1r" secondAttribute="bottom" constant="8" id="b4c-LI-zNS"/>
                             <constraint firstItem="MEG-ye-Mn6" firstAttribute="trailing" secondItem="OUs-H8-z1r" secondAttribute="trailing" id="izw-JX-4ub"/>
+                            <constraint firstItem="zal-sn-Bik" firstAttribute="centerY" secondItem="OUs-H8-z1r" secondAttribute="centerY" id="nEC-GQ-ZHW"/>
                             <constraint firstItem="OUs-H8-z1r" firstAttribute="top" secondItem="OPr-Sl-8k6" secondAttribute="top" id="rSw-0S-oCI"/>
                             <constraint firstItem="mDB-Bt-9rO" firstAttribute="top" secondItem="OP9-yN-mBc" secondAttribute="bottom" id="tNo-Ud-8Hf"/>
                             <constraint firstItem="MEG-ye-Mn6" firstAttribute="leading" secondItem="OUs-H8-z1r" secondAttribute="leading" id="ueC-hb-Y2f"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activitity" destination="zal-sn-Bik" id="GiQ-lW-qwE"/>
                         <outlet property="imagemPacoteViagem" destination="OUs-H8-z1r" id="IDu-Vc-2vx"/>
                         <outlet property="labelDescricaoPacoteViagem" destination="Y00-tc-WlS" id="cme-rT-8Sl"/>
                         <outlet property="labelPrecoPacoteViagem" destination="oY9-Ef-ZbG" id="zPz-fH-wZw"/>

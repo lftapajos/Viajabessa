@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetalhesViagensViewController: UIViewController {
     
     @IBOutlet weak var imagemPacoteViagem: UIImageView!
     @IBOutlet weak var labelTituloPacoteViagem: UILabel!
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
-    @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     @IBOutlet weak var textFieldDataValidade: UITextField!
+    @IBOutlet weak var activitity: UIActivityIndicatorView!
     
     var pacoteSelecionado : Viagem? = nil
     
@@ -26,10 +27,24 @@ class DetalhesViagensViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(aumentarscroll(notification:)), name: .UIKeyboardWillShow, object: nil)
         
         if let pacote = pacoteSelecionado {
-            self.imagemPacoteViagem.image = UIImage(named: pacote.caminhoImagem)
+            
+            self.activitity.startAnimating()
+            
+            Alamofire.request(pacote.caminhoImagem).responseImage { response in
+                //debugPrint(response)
+                //debugPrint(response.result)
+                
+                if let image = response.result.value {
+                    DispatchQueue.main.async(execute: {
+                        self.activitity.stopAnimating()
+                        self.activitity.hidesWhenStopped = true
+                        self.imagemPacoteViagem.image = image
+                    })
+                }
+            }
+            
             self.labelTituloPacoteViagem.text = pacote.titulo
             self.labelDescricaoPacoteViagem.text = pacote.descricao
-            //self.labelDataViagem.text = pacote.dataViagem
             self.labelPrecoPacoteViagem.text = pacote.preco
         }
     }
